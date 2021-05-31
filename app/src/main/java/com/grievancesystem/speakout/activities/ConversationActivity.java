@@ -85,6 +85,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     ImageView send;
     @BindView(R.id.editTextMessage)
     EditText editTextMessage;
+    @BindView(R.id.progressLoader)
+    TashieLoader progressLoader;
     private final TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -103,8 +105,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         }
     };
-    @BindView(R.id.progressLoader)
-    TashieLoader progressLoader;
+
     Unbinder unbinder;
     Complaints complaint;
     String status, new_status;
@@ -206,6 +207,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_conversation);
         parentLayout = findViewById(android.R.id.content);
         unbinder = ButterKnife.bind(this);
+
         complaint = (Complaints) getIntent().getSerializableExtra("complaint");
         textViewComplaintTitle.setText(complaint.getSubject());
         status = complaint.getStatus();

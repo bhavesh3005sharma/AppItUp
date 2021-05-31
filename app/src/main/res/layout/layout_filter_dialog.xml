@@ -11,7 +11,7 @@
         android:padding="20dp"
         android:text="Select FILTERS to Apply"
         android:textSize="20sp"
-        android:background="@color/purple_500"
+        android:background="#64B1E1"
         android:textColor="@color/white"
         android:fontFamily="@font/rubik_light"
         android:gravity="center_horizontal"

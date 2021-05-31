@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.grievancesystem.speakout">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +19,24 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppItUp">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name="com.grievancesystem.speakout.activities.ComplaintActivity"
+            android:name=".activities.MapsCampus"
+            android:label="@string/title_activity_maps_campus"></activity>
+        <activity
+            android:name=".activities.ComplaintActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppItUp.NoActionBar">
             <intent-filter>
@@ -27,16 +50,19 @@
                     android:pathPrefix="/complaint"
                     android:scheme="https" />
             </intent-filter>
-        </activity>
-        <!-- FCM Service to Collect Notification Messages -->
-        <service android:name="com.grievancesystem.speakout.utility.NotificationMessagingService">
+        </activity> <!-- FCM Service to Collect Notification Messages -->
+        <service android:name=".utility.NotificationMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name="com.grievancesystem.speakout.activities.SplashActivity"
+            android:name=".activities.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppItUp.NoActionBar">
             <intent-filter>
@@ -57,31 +83,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.grievancesystem.speakout.activities.ConversationActivity"
+            android:name=".activities.ConversationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppItUp.NoActionBar" />
         <activity
-            android:name="com.grievancesystem.speakout.activities.Register_Complaint"
-            android:theme="@style/NotificationTheme"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.grievancesystem.speakout.activities.NotificationsActivity"
+            android:name=".activities.Register_Complaint"
             android:screenOrientation="portrait"
             android:theme="@style/NotificationTheme" />
         <activity
-            android:name="com.grievancesystem.speakout.activities.SignIn"
+            android:name=".activities.NotificationsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MyAuthTheme"/>
+            android:theme="@style/NotificationTheme" />
         <activity
-            android:name="com.grievancesystem.speakout.activities.ResetPassword"
+            android:name=".activities.SignIn"
             android:screenOrientation="portrait"
             android:theme="@style/MyAuthTheme" />
         <activity
-            android:name="com.grievancesystem.speakout.activities.MainActivity"
+            android:name=".activities.ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAuthTheme" />
+        <activity
+            android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppItUp.NoActionBar" />
         <activity
-            android:name="com.grievancesystem.speakout.activities.SignUpActivity"
+            android:name=".activities.SignUpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyAuthTheme" />
     </application>

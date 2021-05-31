@@ -258,6 +258,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 setToolbarUI(2);
                 closeDrawer();
                 break;
+            case R.id.campus_menu:
+                startActivity(new Intent(MainActivity.this, MapsCampus.class));
+                //title.setText("Campus Menu");
+                //setToolbarUI(2);
+                closeDrawer();
+                break;
             case R.id.nav_about_us:
                 openFragment(new AboutUsFragment());
                 title.setText(getString(R.string.about_us));

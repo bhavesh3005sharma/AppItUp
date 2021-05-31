@@ -92,13 +92,13 @@ public class HomeFragment extends Fragment implements ComplaintsAdapter.Complain
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mAuth = FirebaseAuth.getInstance();
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         unbinder = ButterKnife.bind(this, view);
-        mAuth = FirebaseAuth.getInstance();
 
         adapter = new ComplaintsAdapter(getContext(), list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false);
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -106,8 +106,9 @@ public class HomeFragment extends Fragment implements ComplaintsAdapter.Complain
         recyclerView.setHasFixedSize(true);
         adapter.setUpOnComplaintListener(this);
 
-        Prefs.setFilter_selectedChip(getContext(), -1);
+        Prefs.setFilter_selectedChip(getContext(),-1);
         loadData();
+
 
         chipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
             @Override
@@ -143,7 +144,8 @@ public class HomeFragment extends Fragment implements ComplaintsAdapter.Complain
     }
 
     private void loadData() {
-        if (Prefs.getUser(getContext()).getUserType() == Helper.USER_ADMINISTRATOR) {
+        //showProgressDialogue();
+        if(Prefs.getUser(getContext()).getUserType()==Helper.USER_ADMINISTRATOR){
             loadAllDataAdmin();
             return;
         }
@@ -432,7 +434,7 @@ public class HomeFragment extends Fragment implements ComplaintsAdapter.Complain
         else if (i == 7) chipGroup.check(R.id.library1);
         else if (i == 8) chipGroup.check(R.id.personal1);
 
-        j = i;
+        j=i;
         filterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -579,6 +581,8 @@ public class HomeFragment extends Fragment implements ComplaintsAdapter.Complain
                         adapter.getFilter().filter(RESOLVED);
                     }
                 }
+                shimmerFrameLayout.stopShimmer();
+                shimmerFrameLayout.setVisibility(View.GONE);
             }
 
             @Override

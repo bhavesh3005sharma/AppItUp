@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=6C:3A:C9:1A:8D:13:2B:67:85:B5:8D:D5:FA:1E:95:AE:14:AE:27:95%3Bcom.grievancesystem.speakout
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.grievancesystem.speakout
+
+    SHA-1 certificate fingerprint:
+    6C:3A:C9:1A:8D:13:2B:67:85:B5:8D:D5:FA:1E:95:AE:14:AE:27:95
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDjLRSf4YZrjCRzlleNV1acBqE-8fKwFZ8</string>
+</resources>

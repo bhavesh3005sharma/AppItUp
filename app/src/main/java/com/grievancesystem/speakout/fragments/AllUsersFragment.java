@@ -89,8 +89,13 @@ public class AllUsersFragment extends Fragment implements UsersAdapter.UsersList
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
-
+        if(Prefs.getUser(getContext()).getUserType()==Helper.USER_ADMINISTRATOR)
         loadData();
+
+        else{
+            shimmerFrameLayout.stopShimmer();
+            shimmerFrameLayout.setVisibility(View.GONE);
+        }
 
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);

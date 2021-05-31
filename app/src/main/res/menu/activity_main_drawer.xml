@@ -46,6 +46,10 @@
         android:title="Contact Us">
         <menu>
             <item
+                android:id="@+id/campus_menu"
+                android:icon="@drawable/ic_map"
+                android:title="Campus Map"/>
+            <item
                 android:id="@+id/nav_about_us"
                 android:icon="@drawable/ic_about_us"
                 android:title="@string/about_us" />
