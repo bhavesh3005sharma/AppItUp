@@ -9,11 +9,13 @@
         android:title="Dashboard">
         <menu>
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_home"
                 android:icon="@drawable/ic_home"
                 android:title="@string/home"
                 app:tint="@android:color/darker_gray" />
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_trending"
                 android:icon="@drawable/ic_trending"
                 android:title="@string/trending" />
@@ -25,16 +27,19 @@
         android:title="Account Section">
         <menu>
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_user_account"
                 android:icon="@drawable/ic_account"
                 android:title="@string/user_account" />
 
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_all_user"
                 android:icon="@drawable/ic_people"
                 android:title="@string/all_users" />
 
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_your_complaints"
                 android:icon="@drawable/ic_status"
                 android:title="@string/your_complaints" />
@@ -46,15 +51,18 @@
         android:title="Contact Us">
         <menu>
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/campus_menu"
                 android:icon="@drawable/ic_map"
                 android:title="Campus Map"/>
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_about_us"
                 android:icon="@drawable/ic_about_us"
                 android:title="@string/about_us" />
 
             <item
+                android:iconTint="@color/black"
                 android:id="@+id/nav_faq_help"
                 android:icon="@drawable/ic_faq_help"
                 android:title="@string/faq_help" />
@@ -69,22 +77,20 @@
                 android:id="@+id/mis"
                 android:icon="@drawable/logo_min_min"
                 android:title="MIS"/>
-
             <item
                 android:id="@+id/parentPortal"
                 android:icon="@drawable/parents_portal"
                 android:title="Parent Portal"/>
-
             <item
                 android:id="@+id/md"
                 android:icon="@drawable/md_logo_min"
                 android:title="Mailer Daemon"/>
-
         </menu>
     </item>
 
 
     <item
+        android:iconTint="@color/black"
         android:id="@+id/action_sign_out"
         android:icon="@drawable/ic_sign_out"
         android:title="@string/sign_out" />

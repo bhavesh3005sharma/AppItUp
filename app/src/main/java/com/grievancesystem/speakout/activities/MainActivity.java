@@ -32,6 +32,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
@@ -42,6 +43,7 @@ import com.grievancesystem.speakout.fragments.AboutUsFragment;
 import com.grievancesystem.speakout.fragments.AllUsersFragment;
 import com.grievancesystem.speakout.fragments.FAQorHelpFragment;
 import com.grievancesystem.speakout.fragments.HomeFragment;
+import com.grievancesystem.speakout.fragments.LinksFragment;
 import com.grievancesystem.speakout.fragments.TrendingFragment;
 import com.grievancesystem.speakout.fragments.UserAccountFragment;
 import com.grievancesystem.speakout.fragments.YourComplaintsFragment;
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     boolean monitoringConnectivity = false;
     View parentLayout;
     AlertDialog alertDialogProgress;
+    ExtendedFloatingActionButton fab;
     private final ConnectivityManager.NetworkCallback connectivityCallback
             = new ConnectivityManager.NetworkCallback() {
         @Override
@@ -150,12 +153,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerOpener = findViewById(R.id.drawerOpener);
         title = findViewById(R.id.title);
         app_icon = findViewById(R.id.app_icon);
+        fab=findViewById(R.id.fab);
 
         setToolbarUI(1);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Register_Complaint.class));
@@ -169,6 +173,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
         navigationDrawer.setNavigationItemSelectedListener(this);
+        navigationDrawer.setItemIconTintList(null);
         transaction = getSupportFragmentManager().beginTransaction();
         if (savedInstanceState == null)
             openFragment(new HomeFragment());
@@ -229,18 +234,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
+                fab.setVisibility(View.VISIBLE);
                 openFragment(new HomeFragment());
                 title.setText(getString(R.string.app_name));
                 setToolbarUI(1);
                 closeDrawer();
                 break;
             case R.id.nav_trending:
+                fab.setVisibility(View.VISIBLE);
                 openFragment(new TrendingFragment());
                 title.setText(getString(R.string.trending));
                 setToolbarUI(2);
                 closeDrawer();
                 break;
             case R.id.nav_user_account:
+                fab.setVisibility(View.VISIBLE);
                 openFragment(new UserAccountFragment());
                 title.setText(getString(R.string.user_account));
                 setToolbarUI(2);
@@ -253,6 +261,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 closeDrawer();
                 break;
             case R.id.nav_your_complaints:
+                fab.setVisibility(View.VISIBLE);
                 openFragment(new YourComplaintsFragment());
                 title.setText(getString(R.string.your_complaints));
                 setToolbarUI(2);
@@ -265,14 +274,49 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 closeDrawer();
                 break;
             case R.id.nav_about_us:
+                fab.setVisibility(View.GONE);
                 openFragment(new AboutUsFragment());
                 title.setText(getString(R.string.about_us));
                 setToolbarUI(2);
                 closeDrawer();
                 break;
             case R.id.nav_faq_help:
+                fab.setVisibility(View.GONE);
                 openFragment(new FAQorHelpFragment());
                 title.setText(getString(R.string.faq_help));
+                setToolbarUI(2);
+                closeDrawer();
+                break;
+            case R.id.mis:
+                fab.setVisibility(View.GONE);
+                Bundle bundle = new Bundle();
+                bundle.putString("url", "https://mis.iitism.ac.in/");
+                LinksFragment fragobj = new LinksFragment();
+                fragobj.setArguments(bundle);
+                openFragment(fragobj);
+                title.setText("MIS");
+                setToolbarUI(2);
+                closeDrawer();
+                break;
+            case R.id.parentPortal:
+                fab.setVisibility(View.GONE);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("url", "https://parent.iitism.ac.in/index.php/parent_portal/portal0");
+                LinksFragment fragobj1 = new LinksFragment();
+                fragobj1.setArguments(bundle1);
+                openFragment(fragobj1);
+                title.setText("Parent Portal");
+                setToolbarUI(2);
+                closeDrawer();
+                break;
+            case R.id.md:
+                fab.setVisibility(View.GONE);
+                Bundle bundle2 = new Bundle();
+                bundle2.putString("url", "https://www.facebook.com/MDiitism/");
+                LinksFragment fragobj2 = new LinksFragment();
+                fragobj2.setArguments(bundle2);
+                openFragment(fragobj2);
+                title.setText("Mailer Daemon");
                 setToolbarUI(2);
                 closeDrawer();
                 break;
