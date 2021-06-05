@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -15,6 +16,10 @@
                 android:id="@+id/nav_trending"
                 android:icon="@drawable/ic_trending"
                 android:title="@string/trending" />
+            <item
+                android:id="@+id/nav_mess"
+                android:icon="@drawable/ic_mess"
+                android:title="Mess Management"/>
             <item
                 android:id="@+id/nav_notices"
                 android:icon="@drawable/ic_important_notices"

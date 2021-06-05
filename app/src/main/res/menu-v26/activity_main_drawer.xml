@@ -23,6 +23,10 @@
                 android:id="@+id/nav_notices"
                 android:icon="@drawable/ic_important_notices"
                 android:title="@string/notices" />
+            <item
+                android:id="@+id/nav_mess"
+                android:icon="@drawable/ic_mess"
+                android:title="Mess Management"/>
         </menu>
     </item>
 

@@ -251,6 +251,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 setToolbarUI(2);
                 closeDrawer();
                 break;
+            case R.id.nav_mess:
+                startActivity(new Intent(MainActivity.this, MessActivity.class));
+                closeDrawer();
+                break;
             case R.id.nav_user_account:
                 fab.setVisibility(View.VISIBLE);
                 openFragment(new UserAccountFragment());

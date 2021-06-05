@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AppItUp.NoActionBar.Mess">
+        <item name="fontFamily">@font/rubik_light</item>
+        <item name="tint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

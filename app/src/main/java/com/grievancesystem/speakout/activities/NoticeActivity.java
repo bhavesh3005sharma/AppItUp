@@ -45,7 +45,7 @@ public class NoticeActivity extends AppCompatActivity {
         setContentView(activityNoticeBinding.getRoot());
 
         // set Toolbar
-        getSupportActionBar().setTitle("Notifications");
+        getSupportActionBar().setTitle("Notice Board");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
