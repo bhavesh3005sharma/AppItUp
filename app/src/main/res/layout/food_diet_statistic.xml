@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="diet"
+            type="com.grievancesystem.speakout.models.FoodDietStatistic" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/record_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{diet.title}" />
+
+            <RelativeLayout
+                android:id="@+id/breakfast_stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/breakfast_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/breakfastData"
+                    android:progress="@{diet.breakfastProgress}"
+                    android:progressTint="@color/breakfast_color"
+                    android:theme="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+                    android:thumbTint="@color/breakfast_color" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_breakfast"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    app:cardBackgroundColor="@color/breakfast_color" />
+
+                <TextView
+                    android:id="@+id/breakfastData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toStartOf="@id/card_breakfast"
+                    android:text="@{(String.valueOf(diet.breakfastProgress)+`%`)}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lunch_stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/lunch_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/lunchData"
+                    android:progress="@{diet.lunchProgress}"
+                    android:progressTint="@color/lunch_color"
+                    android:theme="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+                    android:thumbTint="@color/lunch_color" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_lunch"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    app:cardBackgroundColor="@color/lunch_color" />
+
+                <TextView
+                    android:id="@+id/lunchData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toStartOf="@id/card_lunch"
+                    android:text="@{String.valueOf(diet.lunchProgress)+`%`}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dinner_stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/dinner_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/dinnerData"
+                    android:progress="@{diet.dinnerProgress}"
+                    android:progressTint="@color/dinner_color"
+                    android:theme="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+                    android:thumbTint="@color/dinner_color" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_dinner"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    app:cardBackgroundColor="@color/dinner_color" />
+
+                <TextView
+                    android:id="@+id/dinnerData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toStartOf="@id/card_dinner"
+                    android:text="@{String.valueOf(diet.dinnerProgress)+`%`}" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

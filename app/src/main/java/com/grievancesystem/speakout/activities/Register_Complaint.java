@@ -337,6 +337,7 @@ public class Register_Complaint extends AppCompatActivity {
             Chip chip1 = new Chip(context);
             chip1.setText(subcatTitle[j]);
             chip1.setChipBackgroundColorResource(R.color.stroke_tint);
+            chip1.setTextColor(getResources().getColor(R.color.chip_text_tint));
             chip1.setCheckable(true);
             chip1.setFocusable(true);
             chip1.setClickable(true);

@@ -73,10 +73,11 @@ public class NoticeActivity extends AppCompatActivity {
         builder.setView(dialogueCreateNoticeBinding.getRoot());
 
         alertDialog = builder.create();
+        alertDialog.show();
+
         alertDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         alertDialog.getWindow().setBackgroundDrawable(null);
         alertDialog.getWindow().setGravity(Gravity.BOTTOM);
-        alertDialog.show();
 
         dialogueCreateNoticeBinding.submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

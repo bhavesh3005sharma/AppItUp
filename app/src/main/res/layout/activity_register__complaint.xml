@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="30dp"
+        android:paddingBottom="30dp"
         android:layout_gravity="center_vertical">
 
         <ProgressBar
@@ -66,93 +67,111 @@
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:checked="true"
                 android:layout_height="wrap_content"
                 android:text="Registration"
-                android:id="@+id/registration"/>
+                android:id="@+id/registration" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Academics"
-                android:id="@+id/academics"/>
+                android:id="@+id/academics" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DSW"
-                android:id="@+id/dsw"/>
+                android:id="@+id/dsw" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vendors of ISM"
-                android:id="@+id/vendors"/>
+                android:id="@+id/vendors" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MIS/Parent Portal"
-                android:id="@+id/mis"/>
+                android:id="@+id/mis" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hostel"
-                android:id="@+id/hostel"/>
+                android:id="@+id/hostel" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Health Centre"
-                android:id="@+id/health"/>
+                android:id="@+id/health" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Library"
-                android:id="@+id/library"/>
+                android:id="@+id/library" />
 
             <com.google.android.material.chip.Chip
                 app:chipBackgroundColor="@color/stroke_tint"
+                android:textColor="@color/chip_text_tint"
+                app:checkedIconTint="@color/white"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Personal"
-                android:id="@+id/personal"/>
+                android:id="@+id/personal" />
         </com.google.android.material.chip.ChipGroup>
             </LinearLayout>
 
@@ -196,9 +215,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputTitle"
             android:layout_marginTop="20dp"
@@ -222,7 +238,7 @@
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:maxHeight="100dp"
-                android:inputType="textCapSentences"/>
+                android:inputType="textMultiLine" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

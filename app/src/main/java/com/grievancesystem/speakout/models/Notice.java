@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
+import com.grievancesystem.speakout.R;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -43,7 +44,7 @@ public class Notice {
     @BindingAdapter("android:loadImage")
     public static void loadImage(ImageView imageView, String photoUrl) {
         if (photoUrl != null && !photoUrl.isEmpty())
-            Glide.with(imageView).load(photoUrl).into(imageView);
+            Glide.with(imageView).load(photoUrl).placeholder(R.drawable.placeholder_image).into(imageView);
         else imageView.setVisibility(View.GONE);
     }
 

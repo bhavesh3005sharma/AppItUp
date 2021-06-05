@@ -18,7 +18,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppItUp">
-        <activity android:name=".activities.NoticeActivity"></activity>
+        <activity android:name=".activities.MessAttendanceReportActivity"></activity>
+        <activity android:name=".activities.NoticeActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

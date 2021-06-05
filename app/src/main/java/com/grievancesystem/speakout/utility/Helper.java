@@ -40,6 +40,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class Helper {
     public static final String MY_PREFS_NAME = "APP_IT_UP_PREFS";
@@ -212,5 +213,10 @@ public class Helper {
             }
         }.execute();
 
+    }
+
+    public static int getRandomValue(int mn, int mx) {
+        Random r = new Random();
+        return r.nextInt((mx - mn) + 1) + mn;
     }
 }
