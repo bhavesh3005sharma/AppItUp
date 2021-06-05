@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.grievancesystem.speakout.Database.Prefs;
 import com.grievancesystem.speakout.databinding.ActivityMessScheduleBinding;
+import com.grievancesystem.speakout.utility.Helper;
 
 public class MessScheduleActivity extends AppCompatActivity {
 ActivityMessScheduleBinding messScheduleBinding;
@@ -24,5 +27,9 @@ int hostel=-1,day=-1;
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        if (Prefs.getUser(this).getUserType()== Helper.USER_STUDENT){
+            messScheduleBinding.fabCreateNewMenuItem.setVisibility(View.GONE);
+        }
     }
 }

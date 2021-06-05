@@ -21,8 +21,13 @@
         app:selectionRequired="true"
         android:id="@+id/mess">
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            android:padding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/rosaline"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
@@ -30,8 +35,12 @@
             android:focusable="true"
             android:text="Rosaline"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -39,8 +48,12 @@
             android:id="@+id/ruby"
             android:text="Ruby"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -48,8 +61,12 @@
             android:id="@+id/jasper"
             android:text="Jasper"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -57,8 +74,12 @@
             android:id="@+id/amber"
             android:text="Amber"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -66,8 +87,12 @@
             android:id="@+id/diamond"
             android:text="Diamond"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -75,8 +100,12 @@
             android:id="@+id/opal"
             android:text="Opal"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -84,8 +113,12 @@
             android:id="@+id/emarald"
             android:text="Emerald"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -93,8 +126,12 @@
             android:id="@+id/topaz"
             android:text="Topaz"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -102,8 +139,12 @@
             android:id="@+id/sapphire"
             android:text="Sapphire"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -125,8 +166,12 @@
         app:singleSelection="true"
         app:selectionRequired="true">
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -134,8 +179,12 @@
             android:id="@+id/sunday"
             android:text="Sunday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -143,8 +192,12 @@
             android:id="@+id/monday"
             android:text="Monday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -152,8 +205,12 @@
             android:id="@+id/tuesday"
             android:text="Tuesday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -161,8 +218,12 @@
             android:id="@+id/wednesday"
             android:text="Wednesday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -170,8 +231,12 @@
             android:id="@+id/thursday"
             android:text="Thursday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"
@@ -179,8 +244,12 @@
             android:id="@+id/friday"
             android:text="Friday"/>
         <com.google.android.material.chip.Chip
+            android:fontFamily="@font/adamina"
+            android:textSize="16sp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:chipBackgroundColor="@color/stroke_tint_mess"
             android:checkable="true"
             android:clickable="true"

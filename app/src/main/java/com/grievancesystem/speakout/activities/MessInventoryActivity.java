@@ -19,6 +19,7 @@ import com.grievancesystem.speakout.databinding.ActivityMessInventoryBinding;
 import com.grievancesystem.speakout.databinding.DialogueCreateNoticeBinding;
 import com.grievancesystem.speakout.models.Inventory;
 import com.grievancesystem.speakout.models.Notice;
+import com.grievancesystem.speakout.utility.Helper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +48,10 @@ public class MessInventoryActivity extends AppCompatActivity implements Inventor
 
         initRecyclerView();
         loadData();
+
+        if (Prefs.getUser(this).getUserType()== Helper.USER_STUDENT){
+            inventoryBinding.fabCreateNewItem.setVisibility(View.GONE);
+        }
 
         inventoryBinding.fabCreateNewItem.setOnClickListener(new View.OnClickListener() {
             @Override

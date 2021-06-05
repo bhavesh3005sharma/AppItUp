@@ -12,9 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.grievancesystem.speakout.Database.Prefs;
 import com.grievancesystem.speakout.R;
 import com.grievancesystem.speakout.models.Inventory;
 import com.grievancesystem.speakout.models.Notification;
+import com.grievancesystem.speakout.utility.Helper;
 
 import java.util.List;
 
@@ -43,6 +45,10 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.view
         Inventory inventory=inventories.get(position);
         holder.item.setText(inventory.getItemName());
         holder.quantity.setText(inventory.getQuantity());
+        if (Prefs.getUser(context).getUserType()== Helper.USER_STUDENT){
+            holder.edit.setVisibility(View.GONE);
+            holder.delete.setVisibility(View.GONE);
+        }
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

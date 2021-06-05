@@ -68,6 +68,7 @@
         </menu>
     </item>
     <item
+        android:id="@+id/oursites"
         android:checkableBehavior="single"
         android:title="Our Other Websites">
 

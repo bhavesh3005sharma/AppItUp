@@ -190,9 +190,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationDrawer = findViewById(R.id.nav_view);
         Menu nav_menu = navigationDrawer.getMenu();
         if (Prefs.getUser(MainActivity.this).getUserType() == Helper.USER_STUDENT)
-            nav_menu.findItem(R.id.nav_all_user).setVisible(false);
+        {    nav_menu.findItem(R.id.nav_all_user).setVisible(false);}
         if (Prefs.getUser(MainActivity.this).getUserType() == Helper.USER_ADMINISTRATOR)
-            nav_menu.findItem(R.id.nav_your_complaints).setVisible(false);
+        {    nav_menu.findItem(R.id.nav_your_complaints).setVisible(false);
+             //nav_menu.findItem(R.id.oursites).setVisible(false);
+             //nav_menu.removeGroup(R.id.oursites);
+        }
     }
 
     private void setToolbarUI(int i) {
