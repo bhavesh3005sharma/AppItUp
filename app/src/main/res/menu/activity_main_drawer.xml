@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -11,12 +10,15 @@
             <item
                 android:id="@+id/nav_home"
                 android:icon="@drawable/ic_home"
-                android:title="@string/home"
-                app:tint="@android:color/darker_gray" />
+                android:title="@string/home" />
             <item
                 android:id="@+id/nav_trending"
                 android:icon="@drawable/ic_trending"
                 android:title="@string/trending" />
+            <item
+                android:id="@+id/nav_notices"
+                android:icon="@drawable/ic_important_notices"
+                android:title="@string/notices" />
         </menu>
     </item>
 

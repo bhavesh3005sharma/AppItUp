@@ -21,4 +21,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="all_users">All Users</string>
     <string name="title_activity_maps_campus">Map</string>
+    <string name="notices">Notices</string>
 </resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="notice"
+            type="com.grievancesystem.speakout.models.Notice" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:focusable="false"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/background"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_toStartOf="@id/time"
+                android:autoLink="web"
+                android:text="@{notice.title}"
+                android:textColor="#797979"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/notice_title"
+                android:layout_marginHorizontal="20dp"
+                android:background="#D9DBE1" />
+
+            <TextView
+                android:id="@+id/notice_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_margin="20dp"
+                android:autoLink="web"
+                android:text="@{notice.message}"
+                android:textColor="#797979"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notice_details"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="2dp"
+                android:loadImage="@{notice.photoUrl}"
+                android:minHeight="240dp"
+                android:scaleType="centerCrop"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/placeholder_image"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="20dp"
+                android:layout_marginEnd="20dp"
+                android:setTime="@{notice.timeStampMap}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/notice_issued_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:autoLink="web"
+                android:text="@{notice.issuedBy}"
+                android:textColor="#797979"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -19,6 +19,10 @@
                 android:id="@+id/nav_trending"
                 android:icon="@drawable/ic_trending"
                 android:title="@string/trending" />
+            <item
+                android:id="@+id/nav_notices"
+                android:icon="@drawable/ic_important_notices"
+                android:title="@string/notices" />
         </menu>
     </item>
 

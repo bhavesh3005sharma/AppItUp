@@ -240,6 +240,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 setToolbarUI(1);
                 closeDrawer();
                 break;
+            case R.id.nav_notices:
+                startActivity(new Intent(this, NoticeActivity.class));
+                closeDrawer();
+                break;
             case R.id.nav_trending:
                 fab.setVisibility(View.VISIBLE);
                 openFragment(new TrendingFragment());
