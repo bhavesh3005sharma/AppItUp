@@ -130,6 +130,7 @@ public class NoticeActivity extends AppCompatActivity {
                 alertDialog.dismiss();
                 if (task.isSuccessful()) {
                     Helper.toast(NoticeActivity.this, "Notice added Successfully");
+                    Helper.sendTopicMessage("all", notice);
                 } else Helper.toast(NoticeActivity.this, task.getException().getMessage());
             }
         });

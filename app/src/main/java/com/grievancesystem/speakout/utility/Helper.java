@@ -24,6 +24,7 @@ import com.google.gson.Gson;
 import com.grievancesystem.speakout.Database.Prefs;
 import com.grievancesystem.speakout.activities.SignIn;
 import com.grievancesystem.speakout.models.Complaints;
+import com.grievancesystem.speakout.models.Notice;
 import com.grievancesystem.speakout.models.Notification;
 import com.grievancesystem.speakout.models.User;
 import com.squareup.okhttp.MediaType;
@@ -40,7 +41,6 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class Helper {
     public static final String MY_PREFS_NAME = "APP_IT_UP_PREFS";
@@ -215,8 +215,16 @@ public class Helper {
 
     }
 
-    public static int getRandomValue(int mn, int mx) {
-        Random r = new Random();
-        return r.nextInt((mx - mn) + 1) + mn;
+    public static void sendTopicMessage(String topic, Notice notice) {
+        JSONObject dataJson = new JSONObject();
+        Gson gson = new Gson();
+        String jsonString = gson.toJson(notice);
+        try {
+            dataJson = new JSONObject(jsonString);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        sendNotification("/topics/" + topic, dataJson);
     }
 }

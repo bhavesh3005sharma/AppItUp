@@ -3,15 +3,19 @@ package com.grievancesystem.speakout.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.grievancesystem.speakout.Database.Prefs;
 import com.grievancesystem.speakout.R;
 import com.grievancesystem.speakout.models.User;
@@ -48,6 +52,21 @@ public class SplashActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+        subscribeDeviceToTopic();
+    }
+
+    private void subscribeDeviceToTopic() {
+        FirebaseMessaging.getInstance().subscribeToTopic("all")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "msg_subscribed";
+                        if (!task.isSuccessful()) {
+                            msg = "msg_subscribe_failed " + task.getException().getMessage();
+                        }
+                        Log.d("TAG", msg);
+                    }
+                });
     }
 
     private void checkIsBlocked() {
