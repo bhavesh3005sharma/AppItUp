@@ -57,9 +57,9 @@ private static final int MY_CAMERA_REQUEST_CODE = 100;
         setContentView(qrCodeBinding.getRoot());
 
         getSupportActionBar().setTitle("QR CODE");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         if (Prefs.getUser(this).getUserType()==Helper.USER_ADMINISTRATOR){

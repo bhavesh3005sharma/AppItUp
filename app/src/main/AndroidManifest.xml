@@ -19,22 +19,6 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppItUp">
-        <activity android:name=".activities.MessAttendanceReportActivity"></activity>
-        <activity android:name=".activities.NoticeActivity" />
-        <activity android:name=".activities.MessScheduleActivity"
-            android:theme="@style/NotificationTheme"/>
-        <activity
-            android:name=".activities.SelectMessActivity"
-            android:theme="@style/NotificationTheme" />
-        <activity
-            android:name=".activities.MessInventoryActivity"
-            android:theme="@style/NotificationTheme" />
-        <activity
-            android:name=".activities.QRCodeActivity"
-            android:theme="@style/NotificationTheme" />
-        <activity
-            android:name=".activities.MessActivity"
-            android:theme="@style/Theme.AppItUp.NoActionBar.Mess" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -47,8 +31,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <!-- FCM Service to Collect Notification Messages -->
+        <service android:name=".utility.NotificationMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".activities.MapsCampus"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps_campus" />
         <activity
             android:name=".activities.ComplaintActivity"
@@ -65,16 +57,7 @@
                     android:pathPrefix="/complaint"
                     android:scheme="https" />
             </intent-filter>
-        </activity> <!-- FCM Service to Collect Notification Messages -->
-        <service android:name=".utility.NotificationMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+        </activity>
 
         <activity
             android:name=".activities.SplashActivity"
@@ -125,6 +108,33 @@
             android:name=".activities.SignUpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyAuthTheme" />
+        <activity android:name=".activities.MessAttendanceReportActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.NoticeActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.MessScheduleActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.SelectMessActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activities.MessActivity"/>
+        <activity
+            android:name=".activities.MessInventoryActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.QRCodeActivity"
+            android:theme="@style/NotificationTheme"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activities.MessActivity"/>
+        <activity
+            android:name=".activities.MessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppItUp.NoActionBar.Mess" />
     </application>
 
 </manifest>

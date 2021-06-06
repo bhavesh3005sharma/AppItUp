@@ -53,6 +53,10 @@ public class NoticeActivity extends AppCompatActivity {
         initRecyclerView();
         loadData();
 
+        if(Prefs.getUser(this).getUserType()==Helper.USER_STUDENT){
+            activityNoticeBinding.fabCreateNewNotice.setVisibility(View.GONE);
+        }
+
         activityNoticeBinding.fabCreateNewNotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -31,7 +31,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/breakfast"
         android:text="BREAKFAST"
-        app:chipBackgroundColor="#93CCEF"/>
+        android:textColor="@color/white"
+        app:chipBackgroundColor="#64B1E1"/>
     <LinearLayout
         android:id="@+id/linear1"
         android:orientation="vertical"
@@ -170,7 +171,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/lunch"
         android:text="LUNCH"
-        app:chipBackgroundColor="#93CCEF"/>
+        android:textColor="@color/white"
+        app:chipBackgroundColor="#64B1E1"/>
     <LinearLayout
         android:id="@+id/linear2"
         android:orientation="vertical"
@@ -315,7 +317,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/dinner"
         android:text="DINNER"
-        app:chipBackgroundColor="#93CCEF"/>
+        android:textColor="@color/white"
+        app:chipBackgroundColor="#64B1E1"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
