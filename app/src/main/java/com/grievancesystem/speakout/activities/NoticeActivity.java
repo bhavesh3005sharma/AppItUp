@@ -180,6 +180,7 @@ public class NoticeActivity extends AppCompatActivity {
         adapter = new NoticeAdapter(list, NoticeActivity.this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
         activityNoticeBinding.recyclerViewNotices.setLayoutManager(linearLayoutManager);
         activityNoticeBinding.recyclerViewNotices.setAdapter(adapter);
         activityNoticeBinding.recyclerViewNotices.setHasFixedSize(true);
