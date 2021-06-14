@@ -208,7 +208,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:text="We the students of ISM have created SHOUT OUT to make our fellow mates lives easier, to convey their problems and receive a solution. We have brain stormed and brought out several features to this app."
+                                android:text="We the students of ISM have created SPEAK OUT to make our fellow mates lives easier, to convey their problems and receive a solution. We have brain stormed and brought out several features to this app."
                                 android:textAlignment="center"
                                 android:textSize="10sp" />
                         </RelativeLayout>

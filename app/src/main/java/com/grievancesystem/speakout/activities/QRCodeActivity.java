@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
@@ -66,6 +67,7 @@ private static final int MY_CAMERA_REQUEST_CODE = 100;
             codeScanner=new CodeScanner(this,qrCodeBinding.scannerView);
             qrCodeBinding.qrCode.setVisibility(View.GONE);
             qrCodeBinding.textqr.setVisibility(View.GONE);
+            qrCodeBinding.attendance.setVisibility(View.GONE);
             qrCodeBinding.scannerView.setVisibility(View.VISIBLE);
 
             codeScanner.setDecodeCallback(new DecodeCallback() {
@@ -75,7 +77,12 @@ private static final int MY_CAMERA_REQUEST_CODE = 100;
                         @Override
                         public void run() {
                             qrCodeBinding.resultsOfQr.setVisibility(View.VISIBLE);
-                            qrCodeBinding.resultsOfQr.setText(result.getText());
+                            qrCodeBinding.resultsOfQr.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    startActivity(new Intent(QRCodeActivity.this,MessAttendanceReportActivity.class));
+                                }
+                            });
                         }
                     });
                 }
@@ -92,6 +99,12 @@ private static final int MY_CAMERA_REQUEST_CODE = 100;
             try {
                 Bitmap bitmap=encoder.encodeAsBitmap();
                 qrCodeBinding.qrCode.setImageBitmap(bitmap);
+                qrCodeBinding.attendance.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(QRCodeActivity.this,MessAttendanceReportActivity.class));
+                    }
+                });
             } catch (WriterException e) {
                 e.printStackTrace();
             }

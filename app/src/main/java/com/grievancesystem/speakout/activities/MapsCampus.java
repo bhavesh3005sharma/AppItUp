@@ -283,7 +283,7 @@ public class MapsCampus extends FragmentActivity implements OnMapReadyCallback,M
 
     @Override
     public void onClick(int position) {
-        mCurrLocationMarker.remove();
+        if(mCurrLocationMarker!=null)mCurrLocationMarker.remove();
         LatLng ism = latLngList.get(position);
         MarkerOptions marker=new MarkerOptions().position(ism).title(names[position]).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         mCurrLocationMarker=mMap.addMarker(marker);

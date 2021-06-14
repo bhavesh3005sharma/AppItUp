@@ -150,6 +150,7 @@ public class NotificationsActivity extends AppCompatActivity implements Notifica
         adapter = new NotificationsAdapter(getApplicationContext(), list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         recyclerView.setAdapter(adapter);

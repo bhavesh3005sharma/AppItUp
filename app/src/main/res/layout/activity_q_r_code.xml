@@ -28,6 +28,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/qr_code"/>
 
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Attendance"
+        android:id="@+id/attendance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qr_code"/>
+
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scannerView"
         android:layout_width="wrap_content"
@@ -55,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:text="Check their Attendance Reports"
         android:textAlignment="center"
         android:textColor="#FFEE58"
         android:textSize="18sp"
